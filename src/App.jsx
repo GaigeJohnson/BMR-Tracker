@@ -5,12 +5,21 @@ function App() {
   const [weight, setWeight] = useState('')
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
+  const [sex, setSex] = useState('male')
   const [bmr, setBmr] = useState(null)
 
   const calcBMR = (e) => {
     e.preventDefault()
-    if (weight && age) {
-      const result = (10 * weight) + (6.25 * height) - (5 * age) + 5
+    if (weight && height && age) {
+      let result = (10 * weight) + (6.25 * height) - (5 * age)
+
+      if (sex == 'male') {
+        result += 5
+      }
+      else {
+        result -= 161
+      }
+      
       setBmr(Math.round(result))
     }
   }

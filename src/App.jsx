@@ -5,7 +5,7 @@ function App() {
   const [weight, setWeight] = useState('')
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
-  const [sex, setSex] = useState('male')
+  const [gender, setGender] = useState('male')
   const [bmr, setBmr] = useState(null)
 
   const calculateBMR = (e) => {
@@ -13,7 +13,7 @@ function App() {
     if (weight && height && age) {
       let result = (10 * weight) + (6.25 * height) - (5 * age)
 
-      if (sex == 'male') {
+      if (gender == 'male') {
         result += 5
       }
       else {
@@ -34,7 +34,7 @@ return (
           <div className="flex bg-gray-100 p-1 rounded-lg mb-4">
             <button
               type="button"
-              onClick={() => setSex('male')}
+              onClick={() => setGender('male')}
               className={`flex-1 py-2 text-sm font-medium rounded-md transition ${gender === 'male' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-500'}`}
             >
               Male
@@ -92,7 +92,7 @@ return (
         {bmr && (
           <div className="mt-8 p-4 bg-blue-50 rounded-lg text-center border border-blue-100">
             <p className="text-gray-600 text-xs uppercase tracking-widest font-semibold">
-            Estimated {sex} BMR
+            Estimated {gender} BMR
             </p>
             <p className="text-4xl font-black text-blue-600 my-2">{bmr}</p>
             <p className="text-gray-500 text-sm italic">Calories per day</p>

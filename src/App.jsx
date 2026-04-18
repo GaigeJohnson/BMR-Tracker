@@ -11,7 +11,7 @@ function App() {
   const calculateBMR = (e) => {
     e.preventDefault()
     if (weight && height && age) {
-      let result = (10 * weight) + (6.25 * height) - (5 * age)
+      let result = (4.536 * weight) + (15.88 * height) - (5 * age)
 
       if (gender == 'male') {
         result += 5
@@ -49,7 +49,7 @@ return (
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Weight (kg)</label>
+            <label className="block text-sm font-medium text-gray-700">Weight (lbs)</label>
             <input 
               type="number" 
               value={weight}
@@ -60,7 +60,7 @@ return (
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Height (cm)</label>
+            <label className="block text-sm font-medium text-gray-700">Height (inches)</label>
             <input 
               type="number" 
               value={height}

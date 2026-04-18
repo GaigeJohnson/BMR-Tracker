@@ -66,7 +66,7 @@ return (
               value={height}
               onChange={(e) => setHeight(e.target.value)}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
-              placeholder="e.g. 180"
+              placeholder="e.g. 68 (5ft8)"
             />
           </div>
 

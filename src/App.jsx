@@ -8,6 +8,15 @@ function App() {
   const [gender, setGender] = useState('male')
   const [bmr, setBmr] = useState(null)
 
+  const [history, setHistory] = useState(() => {
+    const saved = localStorage.getItem('bmr_history')
+    return saved ? JSON.parse(saved) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('bmr_history', JSON.stringify(history))
+  }, [history])
+
   const calculateBMR = (e) => {
     e.preventDefault()
     if (weight && height && age) {
@@ -24,10 +33,12 @@ function App() {
     }
   }
 
+  
+
 return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">MetabolicTrack BMR</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">BMR Calculator</h1>
         
         <form onSubmit={calculateBMR} className="space-y-4">
           {/* Gender Selection Toggle */}
@@ -55,7 +66,7 @@ return (
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
-              placeholder="e.g. 85"
+              placeholder="e.g. 165"
             />
           </div>
 

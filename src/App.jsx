@@ -33,7 +33,16 @@ function App() {
     }
   }
 
-  
+  const saveEntry = () => {
+    if (!bmr) return
+    const newEntry = {
+      id: Date.now(),
+      date: new Date().toLocaleDateString(),
+      value: bmr,
+      weight: weight
+    }
+    setHistory([newEntry, ...history])
+  }
 
 return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">

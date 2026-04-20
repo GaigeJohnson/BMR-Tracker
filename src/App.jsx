@@ -44,6 +44,12 @@ function App() {
     setHistory([newEntry, ...history])
   }
 
+  const clearHistory = () => {
+    if (window.confirm("Clear all saved entries?")) {
+      setHistory([])
+    }
+  }
+
 return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">

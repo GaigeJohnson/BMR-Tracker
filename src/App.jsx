@@ -117,11 +117,31 @@ return (
 
         {bmr && (
           <div className="mt-8 p-4 bg-blue-50 rounded-lg text-center border border-blue-100">
-            <p className="text-gray-600 text-xs uppercase tracking-widest font-semibold">
-            Estimated {gender} BMR
-            </p>
+            <p className="text-gray-600 text-xs uppercase font-semibold">Estimated {gender} BMR</p>
             <p className="text-4xl font-black text-blue-600 my-2">{bmr}</p>
-            <p className="text-gray-500 text-sm italic">Calories per day</p>
+            <button 
+              onClick={saveEntry}
+              className="mt-2 bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold hover:bg-blue-700"
+            >
+              Save Result
+            </button>
+          </div>
+        )}
+
+        {history.length > 0 && (
+          <div className="mt-8 border-t pt-6">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-bold text-gray-800">History</h2>
+              <button onClick={clearHistory} className="text-xs text-red-500 hover:underline">Clear All</button>
+            </div>
+            <div className="space-y-2 max-h-40 overflow-y-auto">
+              {history.map((entry) => (
+                <div key={entry.id} className="flex justify-between bg-gray-50 p-3 rounded-md text-sm border border-gray-100">
+                  <span className="text-gray-500 font-medium">{entry.date}</span>
+                  <span className="font-bold text-blue-700">{entry.value} kcal <span className="text-gray-400 font-normal">({entry.weight} lbs)</span></span>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

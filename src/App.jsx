@@ -49,89 +49,125 @@ function App() {
   }
 
 return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center p-6 text-white font-sans selection:bg-teal-600">
-      
-      <header className="w-full max-w-7xl flex items-center justify-between mb-16 py-4 border-b border-white/10">
-        <h1 className="text-xl font-extrabold tracking-tighter text-teal-400">
+<div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-teal-600 p-6">
+
+      <header className="max-w-6xl mx-auto flex items-center justify-between mb-12 py-4 border-b border-white/10">
+        <h1 className="text-xl font-extrabold tracking-tighter">
           <span className="text-white">BMR</span><span className="text-teal-400">TRACKER</span>
         </h1>
-        <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
-          <div className="w-2.5 h-2.5 bg-teal-500 rounded-full animate-pulse"></div>
-          <span className="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Live Prototype • v1.3</span>
+        <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
+          <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+          Active Session
         </div>
       </header>
-      
-      <main className="max-w-xl w-full flex-grow flex flex-col items-center justify-center">
-        <div className="w-full bg-slate-900 rounded-3xl shadow-2xl border border-white/5 p-10 backdrop-blur-3xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-black tracking-tight text-white mb-1">
-              Analyze Your BMR
-            </h2>
-            <p className="text-slate-400 text-sm font-medium">Use Imperial Units (lbs / inches)</p>
-          </div>
-          
-          <form onSubmit={calculateBMR} className="space-y-7">
-            <div className="flex bg-slate-800 p-1.5 rounded-2xl border border-white/5">
-              <button
-                type="button"
-                onClick={() => setGender('male')}
-                className={`flex-1 py-3 text-sm font-bold rounded-xl transition duration-200 ${gender === 'male' ? 'bg-teal-500 shadow-md text-slate-950' : 'text-slate-400 hover:text-white'}`}
-              >
-                MALE
-              </button>
-              <button
-                type="button"
-                onClick={() => setGender('female')}
-                className={`flex-1 py-3 text-sm font-bold rounded-xl transition duration-200 ${gender === 'female' ? 'bg-teal-500 shadow-md text-slate-950' : 'text-slate-400 hover:text-white'}`}
-              >
-                FEMALE
-              </button>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {[ 
-                {label: "Weight", id: "w", value: weight, setter: setWeight, unit: "lbs", placeholder: "e.g., 185"},
-                {label: "Height", id: "h", value: height, setter: setHeight, unit: "in", placeholder: "e.g., 70"},
-                {label: "Age", id: "a", value: age, setter: setAge, unit: "years", placeholder: "e.g., 25"}
-              ].map((input) => (
-                <div key={input.id} className="space-y-2">
-                  <label htmlFor={input.id} className="text-xs font-bold text-teal-400 uppercase tracking-widest">{input.label}</label>
-                  <div className="relative">
-                    <input 
-                      id={input.id}
-                      type="number" 
-                      value={input.value}
-                      onChange={(e) => input.setter(e.target.value)}
-                      className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition placeholder:text-slate-600"
-                      placeholder={input.placeholder}
-                      required
-                    />
-                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-slate-500 font-medium">{input.unit}</span>
-                  </div>
-                </div>
+      <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        
+        <section className="bg-slate-900 rounded-3xl border border-white/5 p-8 shadow-2xl backdrop-blur-3xl">
+          <header className="mb-8">
+            <h2 className="text-2xl font-black tracking-tight">Daily Metabolism</h2>
+            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">Input Metrics (Imperial)</p>
+          </header>
+
+          <form onSubmit={calculateMetrics} className="space-y-6">
+            <div className="flex bg-slate-800 p-1 rounded-xl border border-white/5">
+              {['male', 'female'].map((g) => (
+                <button
+                  key={g}
+                  type="button"
+                  onClick={() => setGender(g)}
+                  className={`flex-1 py-2 text-xs font-black rounded-lg transition ${gender === g ? 'bg-teal-500 text-slate-950' : 'text-slate-400'}`}
+                >{g.toUpperCase()}</button>
               ))}
             </div>
 
-            <button 
-              type="submit"
-              className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 py-4 rounded-xl font-extrabold text-slate-950 text-sm uppercase tracking-wider hover:from-teal-400 hover:to-emerald-400 transition shadow-xl"
-            >
-              Calculate BMR
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <label className="text-[10px] font-black text-teal-400 uppercase">Weight (lbs)</label>
+                <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-teal-500 outline-none" required />
+              </div>
+              <div className="space-y-1">
+                <label className="text-[10px] font-black text-teal-400 uppercase">Height (in)</label>
+                <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-teal-500 outline-none" required />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-[10px] font-black text-teal-400 uppercase">Activity Level</label>
+              <select 
+                value={activity} 
+                onChange={(e) => setActivity(e.target.value)}
+                className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:border-teal-500 outline-none appearance-none"
+              >
+                <option value="1.2">Sedentary (Office job, little exercise)</option>
+                <option value="1.375">Lightly Active (1-3 days/week)</option>
+                <option value="1.55">Moderately Active (3-5 days/week)</option>
+                <option value="1.725">Very Active (6-7 days/week)</option>
+              </select>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-[10px] font-black text-teal-400 uppercase">Age</label>
+              <input type="number" value={age} onChange={(e) => setAge(e.target.value)} className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-teal-500 outline-none" required />
+            </div>
+
+            <button type="submit" className="w-full bg-teal-500 py-4 rounded-xl font-black text-slate-950 text-xs uppercase tracking-widest hover:bg-teal-400 transition shadow-lg shadow-teal-500/20">
+              Analyze Metrics
             </button>
           </form>
 
           {bmr && (
-            <div className="mt-10 p-6 bg-slate-800/50 rounded-2xl border border-white/5 text-center animate-in fade-in slide-in-from-top-4 duration-300">
-              <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest">Basal Metabolic Rate</p>
-              <p className="text-5xl font-black text-white my-2">{bmr}</p>
-              <p className="text-slate-500 text-sm italic">Estimated Calories per day</p>
+            <div className="mt-8 pt-8 border-t border-white/5 animate-in fade-in slide-in-from-bottom-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-white/5 rounded-2xl border border-white/5 text-center">
+                  <p className="text-[9px] font-black text-slate-500 uppercase">BMR</p>
+                  <p className="text-2xl font-black text-teal-400">{bmr}</p>
+                </div>
+                <div className="p-4 bg-teal-500/10 rounded-2xl border border-teal-500/20 text-center">
+                  <p className="text-[9px] font-black text-teal-400 uppercase">TDEE</p>
+                  <p className="text-2xl font-black text-white">{tdee}</p>
+                </div>
+              </div>
+              <button onClick={saveEntry} className="w-full mt-4 py-2 border border-white/10 rounded-full text-[10px] font-bold text-slate-400 hover:text-white hover:bg-white/5 transition">
+                + COMMIT TO HISTORY
+              </button>
             </div>
           )}
-        </div>
+        </section>
+
+        <section className="bg-slate-900/50 rounded-3xl border border-white/5 p-8 backdrop-blur-sm min-h-[400px]">
+          <div className="flex justify-between items-center mb-8">
+            <h3 className="text-sm font-black uppercase tracking-widest text-slate-400">Data Logs</h3>
+            {history.length > 0 && (
+              <button onClick={() => setHistory([])} className="text-[10px] font-bold text-red-500/50 hover:text-red-500 transition">PURGE</button>
+            )}
+          </div>
+
+          {history.length === 0 ? (
+            <div className="h-64 flex flex-col items-center justify-center border-2 border-dashed border-white/5 rounded-2xl">
+              <p className="text-slate-600 text-xs font-medium">No encrypted logs found.</p>
+            </div>
+          ) : (
+            <div className="space-y-3 overflow-y-auto max-h-[500px] pr-2 scrollbar-hide">
+              {history.map((entry) => (
+                <div key={entry.id} className="bg-slate-800/40 p-5 rounded-2xl border border-white/5 flex justify-between items-center">
+                  <div>
+                    <p className="text-[10px] font-black text-slate-500 uppercase">{entry.date}</p>
+                    <p className="text-xs text-slate-300 font-medium">{entry.weight} lbs</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-lg font-black text-teal-400">{entry.value} <span className="text-[9px] text-slate-500">BMR</span></p>
+                    <p className="text-xs font-bold text-white">{entry.tdee} <span className="text-[9px] text-slate-500 uppercase">TDEE</span></p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
       </main>
-      
-      <footer className="w-full max-w-7xl mt-20 text-center text-slate-700 text-[11px] font-bold tracking-[0.2em] uppercase py-3 border-t border-white/5">
-        Built for PSU IST-256 • Spring 2026
+
+      <footer className="max-w-6xl mx-auto mt-12 text-center py-6 border-t border-white/5">
+        <p className="text-[10px] font-black text-slate-700 tracking-[0.3em] uppercase">PSU IST-256 System Output • Spring 2026</p>
       </footer>
     </div>
   )

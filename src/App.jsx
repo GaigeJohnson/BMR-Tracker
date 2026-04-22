@@ -57,7 +57,7 @@ function App() {
   }
 
   const infoSections = [
-    { id: 1, title: "Why Your BMR Matters", content: "Placeholder text" },
+    { id: 1, title: "Why Your BMR Matters", content: "Your BMR is the main metric you need to worry about when you want to change or maintain your weight. Actively keeping up with your estimated BMR is essential, because as you lose or gain weight, your BMR changes, meaning your daily 'budget' changes." },
     { id: 2, title: "How weight Loss/Gain Works", content: "Placeholder text" },
     { id: 3, title: "Tracking Calories", content: "Placeholder text" }
   ]

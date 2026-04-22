@@ -86,7 +86,7 @@ return (
 
       <header className="max-w-6xl mx-auto flex items-center justify-between mb-12 py-4 border-b border-white/10">
         <h1 className="text-xl font-extrabold tracking-tighter">
-          <span className="text-white">BMR</span><span className="text-teal-400">TRACKER</span>
+          <span className="text-white">METABO</span><span className="text-teal-400">LINK</span>
         </h1>
         <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
           <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
@@ -98,7 +98,7 @@ return (
         
         <section className="bg-slate-900 rounded-3xl border border-white/5 p-8 shadow-2xl backdrop-blur-3xl">
           <header className="mb-8">
-            <h2 className="text-2xl font-black tracking-tight">Daily Metabolism</h2>
+            <h2 className="text-2xl font-black tracking-tight">TDEE Calculator</h2>
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">Input Metrics (Imperial)</p>
           </header>
 

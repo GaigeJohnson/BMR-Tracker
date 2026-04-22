@@ -63,7 +63,7 @@ return (
         </div>
       </header>
       
-      <main className="max-w-xl w-full flex-grow flex items-center justify-center">
+      <main className="max-w-xl w-full flex-grow flex flex-col items-center justify-center">
         <div className="w-full bg-slate-900 rounded-3xl shadow-2xl border border-white/5 p-10 backdrop-blur-3xl">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-black tracking-tight text-white mb-1">
@@ -116,13 +116,12 @@ return (
 
             <button 
               type="submit"
-              className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 py-4.5 rounded-xl font-extrabold text-slate-950 text-sm uppercase tracking-wider hover:from-teal-400 hover:to-emerald-400 transition shadow-xl"
+              className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 py-4 rounded-xl font-extrabold text-slate-950 text-sm uppercase tracking-wider hover:from-teal-400 hover:to-emerald-400 transition shadow-xl"
             >
               Calculate BMR
             </button>
           </form>
 
-          {/* Results section */}
           {bmr && (
             <div className="mt-10 p-6 bg-slate-800/50 rounded-2xl border border-white/5 text-center animate-in fade-in slide-in-from-top-4 duration-300">
               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest">Basal Metabolic Rate</p>

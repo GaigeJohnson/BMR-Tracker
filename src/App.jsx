@@ -61,7 +61,7 @@ function App() {
       title: "Why Your TDEE Matters",
       content: `Your TDEE (Total Daily Energy Expenditure) is the main metric you need to worry about when you want to change or maintain your weight.
                  Actively keeping up with your estimated TDEE is essential, because as you lose or gain weight, your 
-                 BMR changes, meaning your daily "budget" changes.` },
+                 BMR (Basal Metabolic Rate) changes, meaning your daily "budget" changes.` },
     { id: 2,
       title: "How Weight Loss Works",
       content: `If you go above your daily TDEE, you gain weight. If you go below your daily TDEE, you lose weight. 

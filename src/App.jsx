@@ -57,9 +57,25 @@ function App() {
   }
 
   const infoSections = [
-    { id: 1, title: "Why Your BMR Matters", content: "Your BMR is the main metric you need to worry about when you want to change or maintain your weight. Actively keeping up with your estimated BMR is essential, because as you lose or gain weight, your BMR changes, meaning your daily 'budget' changes." },
-    { id: 2, title: "How weight Loss/Gain Works", content: "Placeholder text" },
-    { id: 3, title: "Tracking Calories", content: "Placeholder text" }
+    { id: 1,
+      title: "Why Your BMR Matters",
+      content: `Your BMR is the main metric you need to worry about when you want to change or maintain your weight.
+                 Actively keeping up with your estimated BMR is essential, because as you lose or gain weight, your 
+                 BMR changes, meaning your daily "budget" changes.` },
+    { id: 2,
+      title: "How weight Loss Works",
+      content: `If you go above your daily BMR, you gain weight. If you go below your daily BMR, you lose weight. 
+      There are plenty of trending diets that suggest only eating meat or completely avoiding sugar and they do work, but not the 
+      soley because you stuck to or avoided certain foods. These diets indirectly have you stay in a caloric deficit, because the
+      foods you have to eat in these diets are low in calories, so you'd have to really over eat in order to not lose weight. 
+      Realistically, you can lose weight when all you eat is junk food. This means that it is possible to only eat cookies and lose weight, 
+      as long as you stay below your BMR.`},
+    { id: 3,
+      title: "Tracking Calories",
+      content: `Placeholder text` },
+    { id: 4,
+      title: "Realistic Timeframe",
+      content: `Placeholder text`}
   ]
 
 return (

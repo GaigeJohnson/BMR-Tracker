@@ -71,7 +71,9 @@ function App() {
       Realistically, you can eat anything you want and lose weight, as long as you stay below your daily BMR`},
     { id: 3,
       title: "Tracking Calories",
-      content: `Placeholder text` },
+      content: `On the back of almost everything you can buy from a store, there will be a nutrition label. In the biggest font, the calories 
+      will be listed for the specified serving size. If there is no label available, you can simply google the calories for the item. You'll
+       want to force yourself to track the calories in your head, on an app, or on paper until it becomes something you don't even think about.` },
     { id: 4,
       title: "Realistic Timeframe",
       content: `Placeholder text`}

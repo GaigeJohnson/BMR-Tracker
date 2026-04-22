@@ -217,7 +217,7 @@ return (
           )}
         </section>
 
-        <section className="mt-6 space-y-4">
+        <section className="mt-2 space-y-4">
           <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4">
           In Depth Video on Caloric Deficits:
           </h3>

@@ -65,11 +65,10 @@ function App() {
     { id: 2,
       title: "How weight Loss Works",
       content: `If you go above your daily BMR, you gain weight. If you go below your daily BMR, you lose weight. 
-      There are plenty of trending diets that suggest only eating meat or completely avoiding sugar and they do work, but not the 
+      There are plenty of trending diets that suggest only eating meat or completely avoiding sugar and they do work,  
       soley because you stuck to or avoided certain foods. These diets indirectly have you stay in a caloric deficit, because the
       foods you have to eat in these diets are low in calories, so you'd have to really over eat in order to not lose weight. 
-      Realistically, you can lose weight when all you eat is junk food. This means that it is possible to only eat cookies and lose weight, 
-      as long as you stay below your BMR.`},
+      Realistically, you can eat anything you want and lose weight, as long as you stay below your daily BMR`},
     { id: 3,
       title: "Tracking Calories",
       content: `Placeholder text` },

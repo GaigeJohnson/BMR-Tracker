@@ -58,16 +58,16 @@ function App() {
 
   const infoSections = [
     { id: 1,
-      title: "Why Your BMR Matters",
-      content: `Your BMR is the main metric you need to worry about when you want to change or maintain your weight.
-                 Actively keeping up with your estimated BMR is essential, because as you lose or gain weight, your 
+      title: "Why Your TDEE Matters",
+      content: `Your TDEE (Total Daily Energy Expenditure) is the main metric you need to worry about when you want to change or maintain your weight.
+                 Actively keeping up with your estimated TDEE is essential, because as you lose or gain weight, your 
                  BMR changes, meaning your daily "budget" changes.` },
     { id: 2,
-      title: "How weight Loss Works",
-      content: `If you go above your daily BMR, you gain weight. If you go below your daily BMR, you lose weight. 
+      title: "How Weight Loss Works",
+      content: `If you go above your daily TDEE, you gain weight. If you go below your daily TDEE, you lose weight. 
       There are plenty of trending diets that suggest only eating meat or completely avoiding sugar and they do work,  
-      soley because you stuck to or avoided certain foods. These diets indirectly have you stay in a caloric deficit, because the
-      foods you have to eat in these diets are low in calories, so you'd have to really over eat in order to not lose weight. 
+      solely because you stuck to or avoided certain foods. These diets indirectly have you stay in a caloric deficit, because the
+      foods you have to eat in these diets are low in calories, so you'd have to really overeat in order to not lose weight. 
       Realistically, you can eat anything you want and lose weight, as long as you stay below your daily BMR`},
     { id: 3,
       title: "Tracking Calories",

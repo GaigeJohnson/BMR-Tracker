@@ -130,10 +130,10 @@ return (
                 onChange={(e) => setActivity(e.target.value)}
                 className="w-full bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:border-teal-500 outline-none appearance-none"
               >
-                <option value="1.2">Sedentary (Office job, little exercise)</option>
-                <option value="1.375">Lightly Active (1-3 days/week)</option>
-                <option value="1.55">Moderately Active (3-5 days/week)</option>
-                <option value="1.725">Very Active (6-7 days/week)</option>
+                <option value="1.2">Sedentary (Bedrotting)</option>
+                <option value="1.375">Lightly Active (1-3 days of exercise a week)</option>
+                <option value="1.55">Moderately Active (3-5 days of exercise a week)</option>
+                <option value="1.725">Very Active (6-7 days of exercise a week)</option>
               </select>
             </div>
 

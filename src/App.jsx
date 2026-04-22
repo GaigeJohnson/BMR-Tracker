@@ -216,6 +216,34 @@ return (
             </div>
           )}
         </section>
+
+        <section className="mt-6 space-y-4">
+          <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4">
+          Reference Media
+          </h3>
+          <div className="grid grid-cols-1 gap-4">
+            <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+          </div>
+            <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="max-w-6xl mx-auto mt-12 text-center py-6 border-t border-white/5">

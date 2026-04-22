@@ -8,6 +8,7 @@ function App() {
   const [gender, setGender] = useState('male')
   const [activity, setActivity] = useState('1.2')
   const [bmr, setBmr] = useState(null)
+  const [tdee, setTdee] = useState(null)
 
   const [history, setHistory] = useState(() => {
     const saved = localStorage.getItem('bmr_history')
@@ -22,7 +23,12 @@ function App() {
     e.preventDefault()
     if (weight && height && age) {
       let result = (4.536 * weight) + (15.88 * height) - (5 * age)
-      gender === 'male' ? bmrResult += 5 : bmrResult -= 161
+      
+      if (gender === 'male') {
+        result += 5
+      } else {
+        result -= 161
+      }
       
       const finalBmr = Math.round(bmrResult)
       setBmr(finalBmr)
@@ -69,7 +75,7 @@ return (
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">Input Metrics (Imperial)</p>
           </header>
 
-          <form onSubmit={calculateMetrics} className="space-y-6">
+          <form onSubmit={calculateBMR} className="space-y-6">
             <div className="flex bg-slate-800 p-1 rounded-xl border border-white/5">
               {['male', 'female'].map((g) => (
                 <button

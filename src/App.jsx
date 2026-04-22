@@ -30,7 +30,7 @@ function App() {
         result -= 161
       }
       
-      const finalBmr = Math.round(bmrResult)
+      const finalBmr = Math.round(result)
       setBmr(finalBmr)
       setTdee(Math.round(finalBmr * parseFloat(activity)))
     }

@@ -51,12 +51,17 @@ function App() {
   }
 
 return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">BMR Calculator</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex flex-col items-center justify-center p-6 font-sans">
+      
+      <div className="max-w-md w-full bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 text-white">
+        <header className="text-center mb-8">
+          <h1 className="text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+            BMR Tracker
+          </h1>
+          <p className="text-blue-200/70 text-sm mt-1">BMR Tracker</p>
+        </header>
         
         <form onSubmit={calculateBMR} className="space-y-4">
-          {/* Gender Selection Toggle */}
           <div className="flex bg-gray-100 p-1 rounded-lg mb-4">
             <button
               type="button"

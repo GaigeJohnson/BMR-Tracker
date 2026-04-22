@@ -6,6 +6,7 @@ function App() {
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
   const [gender, setGender] = useState('male')
+  const [activity, setActivity] = useState('1.2')
   const [bmr, setBmr] = useState(null)
 
   const [history, setHistory] = useState(() => {
@@ -21,15 +22,11 @@ function App() {
     e.preventDefault()
     if (weight && height && age) {
       let result = (4.536 * weight) + (15.88 * height) - (5 * age)
-
-      if (gender == 'male') {
-        result += 5
-      }
-      else {
-        result -= 161
-      }
-
-      setBmr(Math.round(result))
+      gender === 'male' ? bmrResult += 5 : bmrResult -= 161
+      
+      const finalBmr = Math.round(bmrResult)
+      setBmr(finalBmr)
+      setTdee(Math.round(finalBmr * parseFloat(activity)))
     }
   }
 
@@ -39,6 +36,7 @@ function App() {
       id: Date.now(),
       date: new Date().toLocaleDateString(),
       value: bmr,
+      tdee: tdee,
       weight: weight
     }
     setHistory([newEntry, ...history])

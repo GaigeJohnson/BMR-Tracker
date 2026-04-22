@@ -225,7 +225,7 @@ return (
             <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
               <iframe 
                 className="w-full h-full"
-                src="https://www.youtube.com/watch?v=ZGTMUwEDBu4" 
+                src="https://www.youtube.com/embed/ZGTMUwEDBu4" 
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -238,7 +238,7 @@ return (
               <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
                 <iframe 
                   className="w-full h-full"
-                  src="https://www.youtube.com/watch?v=hzwnwLgmFOQ" 
+                  src="https://www.youtube.com/embed/hzwnwLgmFOQ" 
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

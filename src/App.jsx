@@ -76,7 +76,9 @@ function App() {
        want to force yourself to track the calories in your head, on an app, or on paper until it becomes something you don't even think about.` },
     { id: 4,
       title: "Realistic Timeframe",
-      content: `Placeholder text`}
+      content: `The reccommended deficit to be in by medical professionals is 500. This would translate to 1lb of fat burned a week, because every 
+      3,500 calories lost through a deficit results in 1lb of fat being burned. If you go beyond 1,000 a caloric deficit, you run the risk 
+      of losing significant muscle mass, temporary loss of hair, nutrient deficiency, and various other negative side effects.`}
   ]
 
 return (

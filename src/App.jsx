@@ -173,7 +173,7 @@ return (
       </main>
 
       <footer className="max-w-6xl mx-auto mt-12 text-center py-6 border-t border-white/5">
-        <p className="text-[10px] font-black text-slate-700 tracking-[0.3em] uppercase">PSU IST-256 System Output • Spring 2026</p>
+        <p className="text-[10px] font-black text-slate-700 tracking-[0.3em] uppercase">PSU • IST-256 • Spring 2026</p>
       </footer>
     </div>
   )

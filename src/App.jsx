@@ -219,32 +219,37 @@ return (
 
         <section className="mt-6 space-y-4">
           <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4">
-          Reference Media
+          Helpful Videos
+
+          In Depth Video on Caloric Deficits:
           </h3>
           <div className="grid grid-cols-1 gap-4">
             <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
               <iframe 
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                src="https://www.youtube.com/watch?v=ZGTMUwEDBu4" 
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
               ></iframe>
           </div>
-            <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/VIDEO_ID_2" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
+          <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4">
+          Nutrition Label Crash Course:
+          </h3>
+              <div className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-slate-900">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/watch?v=hzwnwLgmFOQ" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
 
       <footer className="max-w-6xl mx-auto mt-12 text-center py-6 border-t border-white/5">
         <p className="text-[10px] font-black text-slate-700 tracking-[0.3em] uppercase">PSU • IST-256 • Spring 2026</p>

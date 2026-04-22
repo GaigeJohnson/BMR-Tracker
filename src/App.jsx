@@ -78,7 +78,13 @@ function App() {
       title: "Realistic Timeframe",
       content: `The reccommended deficit to be in by medical professionals is 500. This would translate to 1lb of fat burned a week, because every 
       3,500 calories lost through a deficit results in 1lb of fat being burned. If you go beyond 1,000 a caloric deficit, you run the risk 
-      of losing significant muscle mass, temporary loss of hair, nutrient deficiency, and various other negative side effects.`}
+      of losing significant muscle mass, temporary loss of hair, nutrient deficiency, and various other negative side effects.`},
+    { id: 5,
+      title: "Alternative Activity Tracking",
+      content: `If you wish to not rely on a loose estimate, you can download a step counter on your phone and that will give you a much more accurate estimate
+      of the total calories you burn through activity. Over time, you can get an idea as to how many calories you burn a day without guessing and you simply add that 
+      number on to your estimated BMR in order to get your TDEE.`
+    }
   ]
 
 return (

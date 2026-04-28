@@ -171,6 +171,22 @@ return (
                     <p className="text-[10px] font-black text-slate-500 uppercase">{entry.date}</p>
                     <p className="text-xs text-slate-300 font-medium">{entry.weight} lbs</p>
                   </div>
+                    <div className="hidden sm:block flex-1 mx-8 space-y-1">
+                      <div className="flex justify-between text-[9px] font-black uppercase tracking-tighter text-slate-600">
+                        <span>Basal vs Activity</span>
+                        <span>{Math.round((entry.value / entry.tdee) * 100)}%</span>
+                      </div>
+                    <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden flex border border-white/5">
+                      <div 
+                        className="bg-teal-500 h-full transition-all" 
+                        style={{ width: `${(entry.value / entry.tdee) * 100}%` }}
+                      ></div>
+                      <div 
+                        className="bg-slate-700 h-full" 
+                        style={{ width: `${100 - (entry.value / entry.tdee) * 100}%` }}
+                      ></div>
+                    </div>
+                  </div>
                   <div className="text-right">
                     <p className="text-lg font-black text-teal-400">{entry.value} <span className="text-[9px] text-slate-500">BMR</span></p>
                     <p className="text-xs font-bold text-white">{entry.tdee} <span className="text-[9px] text-slate-500 uppercase">TDEE</span></p>
